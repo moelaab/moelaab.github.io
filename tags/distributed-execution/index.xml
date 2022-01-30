@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>distributed execution | V-Lab DataScience</title>
+    <link>/tags/distributed-execution/</link>
+      <atom:link href="/tags/distributed-execution/index.xml" rel="self" type="application/rss+xml" />
+    <description>distributed execution</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 20 Aug 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/img/icon-512.png</url>
+      <title>distributed execution</title>
+      <link>/tags/distributed-execution/</link>
+    </image>
+    
+    <item>
+      <title>Image Batik Classification Based using Ensemble Learning</title>
+      <link>/publication/2021-11-01-sdcs-cosrev/</link>
+      <pubDate>Fri, 20 Aug 2021 00:00:00 +0000</pubDate>
+      <guid>/publication/2021-11-01-sdcs-cosrev/</guid>
+      <description>&lt;!-- raw HTML omitted --&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

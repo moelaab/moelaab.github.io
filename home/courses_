@@ -1,0 +1,73 @@
++++
+# Accomplishments widget.
+widget = "accomplishments"  # See https://sourcethemes.com/academic/docs/page-builder/
+headless = true  # This file represents a page section.
+active = true  # Activate this widget? true/false
+weight = 40  # Order that this section will appear.
+
+title = "Relevant Courses"
+subtitle = ""
+
+
+date_format = "Jan 2006"
+
+
+
+[[item]]
+  organization = "University of Trunojoyo Madura  "
+  title = "Web Mining (Mulaab, S.Si, M.Kom)"
+  url = "https://mulaab.github.io/datascience"
+  certificate_url = ""
+  date_start = "2019-01-01"
+  date_end = "2018-05-01"
+  description = "This Lecture for impoving text retrieval"
+
+[[item]]
+  organization = "University of Trunojoyo Madura  "
+  title = "Web Mining (Mulaab, S.Si, M.Kom)"
+  url = "https://mulaab.github.io/datascience"
+  certificate_url = ""
+  date_start = "2019-01-01"
+  date_end = "2018-05-01"
+  description = "This Lecture for impoving text retrieval"
+
+[[item]]
+  organization = "University of Trunojoyo Madura  "
+  title = "Web Mining (Mulaab, S.Si, M.Kom)"
+  url = "https://mulaab.github.io/datascience"
+  certificate_url = ""
+  date_start = "2019-01-01"
+  date_end = "2018-05-01"
+  description = "This Lecture for impoving text retrieval"
+
+[[item]]
+  organization = "Columbia University"
+  titleorganization = "University of Trunojoyo Madura  "
+  title = "Web Mining (Mulaab, S.Si, M.Kom)"
+  url = "https://mulaab.github.io/datascience"
+  
+  certificate_url = ""
+  date_start = "2019-01-01"
+  date_end = "2018-05-01"
+  description = "This Lecture for impoving text retrieval"
+
+[[item]]
+  organization = "University of Trunojoyo Madura  "
+  title = "Web Mining (Mulaab, S.Si, M.Kom)"
+  url = "https://mulaab.github.io/datascience"
+  certificate_url = ""
+  date_start = "2019-01-01"
+  date_end = "2018-05-01"
+  description = "This Lecture for impoving text retrieval"
+
+[[item]]
+  organization = "University of Trunojoyo Madura  "
+  title = "Web Mining (Mulaab, S.Si, M.Kom)"
+  url = "https://mulaab.github.io/datascience"
+  certificate_url = ""
+  date_start = "2019-01-01"
+  date_end = "2018-05-01"
+  description = "This Lecture for impoving text retrieval"
+
+
++++
