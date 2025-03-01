@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tools | V-Lab DataScience</title>
+    <title>Tools | V-Lab Data Science</title>
     <link>/tags/tools/</link>
       <atom:link href="/tags/tools/index.xml" rel="self" type="application/rss+xml" />
     <description>Tools</description>
@@ -17,6 +17,14 @@
       <link>/project/atleta/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
       <guid>/project/atleta/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Uji coba</title>
+      <link>/project/atleta-copy/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>/project/atleta-copy/</guid>
       <description></description>
     </item>
     
