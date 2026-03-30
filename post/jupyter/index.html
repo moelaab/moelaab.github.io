@@ -525,7 +525,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    2 min read
+    3 min read
   </span>
   
 
@@ -659,10 +659,93 @@
     <div class="article-style">
       <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> IPython.core.display <span style="color:#f92672">import</span> Image
 Image(<span style="color:#e6db74">&#39;https://www.python.org/static/community_logos/python-logo-master-v3-TM-flattened.png&#39;</span>)
-</code></pre></div><p><img src="./index_1_0.png" alt="png"></p>
+</code></pre></div><p><img src="output_1_0.png" alt="png"></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Welcome to Academic!&#34;</span>)
 </code></pre></div><pre><code>Welcome to Academic!
 </code></pre>
+<p>Berikut langkah-langkah <strong>menghubungkan komputer Windows ke GitHub menggunakan SSH</strong>, disesuaikan dengan sistem operasi <strong>Windows 11</strong> (seperti yang Anda gunakan):</p>
+<hr>
+<h3 id="1-pastikan-openssh-client-sudah-terinstal"><strong>1. Pastikan OpenSSH Client sudah terinstal</strong></h3>
+<ul>
+<li>Buka <strong>Settings</strong> → <strong>Apps</strong> → <strong>Optional features</strong></li>
+<li>Cari <strong>OpenSSH Client</strong>
+<ul>
+<li>Jika belum ada, klik <strong>Add a feature</strong> → cari <strong>OpenSSH Client</strong> → install</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>Alternatif: Gunakan <strong>Git Bash</strong> (jika sudah menginstal Git for Windows), karena sudah menyertakan SSH.</p>
+</blockquote>
+<hr>
+<h3 id="2-buka-terminal-powershell-command-prompt-atau-git-bash"><strong>2. Buka terminal (PowerShell, Command Prompt, atau Git Bash)</strong></h3>
+<p>Disarankan gunakan <strong>Git Bash</strong> (lebih mirip Linux) atau <strong>PowerShell</strong>.</p>
+<hr>
+<h3 id="3-buat-pasangan-kunci-ssh"><strong>3. Buat pasangan kunci SSH</strong></h3>
+<p>Jalankan perintah berikut di terminal (ganti <code>your_email@example.com</code> dengan email GitHub Anda):</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh-keygen -t ed25519 -C <span style="color:#e6db74">&#34;your_email@example.com&#34;</span>
+</code></pre></div><blockquote>
+<p>Jika muncul error seperti <em>&ldquo;unknown key type&rdquo;</em>, gunakan RSA:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh-keygen -t rsa -b <span style="color:#ae81ff">4096</span> -C <span style="color:#e6db74">&#34;your_email@example.com&#34;</span>
+</code></pre></div></blockquote>
+<ul>
+<li>Tekan <strong>Enter</strong> untuk menyimpan di lokasi default (<code>C:\Users\&lt;NamaUser&gt;\.ssh\id_ed25519</code>)</li>
+<li>Masukkan <strong>passphrase</strong> (opsional tapi aman) atau tekan Enter lagi untuk melewati</li>
+</ul>
+<hr>
+<h3 id="4-mulai-ssh-agent-di-windows"><strong>4. Mulai SSH Agent (di Windows)</strong></h3>
+<p>Jalankan di PowerShell <strong>sebagai admin</strong> (jika diperlukan):</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell"><span style="color:#75715e"># Mulai layanan SSH Agent</span>
+Get-Service -Name ssh-agent | Set-Service -StartupType Automatic
+Start-Service ssh-agent
+</code></pre></div><p>Lalu tambahkan kunci privat:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh-add ~/.ssh/id_ed25519
+</code></pre></div><blockquote>
+<p>Jika pakai Git Bash, jalankan langsung di Git Bash.<br>
+Jika pakai PowerShell dan kunci bernama <code>id_rsa</code>, ganti sesuai nama file.</p>
+</blockquote>
+<hr>
+<h3 id="5-salin-kunci-publik-ke-clipboard"><strong>5. Salin kunci publik ke clipboard</strong></h3>
+<p>Jalankan di terminal:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cat ~/.ssh/id_ed25519.pub
+</code></pre></div><p>Atau, jika pakai PowerShell:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">Get-Content ~/.ssh/id_ed25519.pub | Set-Clipboard
+</code></pre></div><blockquote>
+<p>Ini akan menyalin seluruh isi kunci publik ke clipboard.</p>
+</blockquote>
+<hr>
+<h3 id="6-tambahkan-kunci-publik-ke-github"><strong>6. Tambahkan kunci publik ke GitHub</strong></h3>
+<ol>
+<li>Buka <a href="https://github.com/settings/keys">https://github.com/settings/keys</a></li>
+<li>Klik <strong>New SSH key</strong></li>
+<li>Isi:
+<ul>
+<li><strong>Title</strong>: misalnya <code>Windows 11 Laptop</code></li>
+<li><strong>Key type</strong>: pilih <strong>Authentication Key</strong></li>
+<li><strong>Key</strong>: tempelkan kunci yang sudah disalin</li>
+</ul>
+</li>
+<li>Klik <strong>Add SSH key</strong></li>
+</ol>
+<hr>
+<h3 id="7-uji-koneksi-ssh-ke-github"><strong>7. Uji koneksi SSH ke GitHub</strong></h3>
+<p>Jalankan di terminal:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh -T git@github.com
+</code></pre></div><p>Jika muncul peringatan seperti:</p>
+<pre><code>Are you sure you want to continue connecting (yes/no)?
+</code></pre><p>Ketik <strong>yes</strong> lalu tekan Enter.</p>
+<p>Jika berhasil, Anda akan melihat:</p>
+<pre><code>Hi &lt;username&gt;! You've successfully authenticated...
+</code></pre><hr>
+<h3 id="8-gunakan-url-ssh-saat-clone-atau-remote"><strong>8. Gunakan URL SSH saat clone atau remote</strong></h3>
+<p>Saat meng-clone repositori, pastikan gunakan format SSH:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone git@github.com:username/nama-repo.git
+</code></pre></div><p>Untuk mengubah remote yang sebelumnya HTTPS ke SSH:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git remote set-url origin git@github.com:username/nama-repo.git
+</code></pre></div><hr>
+<p>✅ Setelah ini, Anda bisa <code>git push</code>/<code>pull</code> tanpa memasukkan username &amp; password GitHub.</p>
+<p>Jika Anda menggunakan <strong>VS Code</strong> atau <strong>GitHub Desktop</strong>, pastikan mereka juga menggunakan terminal/Git yang mendukung SSH (biasanya otomatis terdeteksi).</p>
+<p>Semoga membantu!</p>
 <h2 id="install-python-and-jupyterlab">Install Python and JupyterLab</h2>
 <p><a href="https://www.anaconda.com/distribution/#download-section">Install Anaconda</a> which includes Python 3 and JupyterLab.</p>
 <p>Alternatively, install JupyterLab with <code>pip3 install jupyterlab</code>.</p>
