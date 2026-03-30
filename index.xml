@@ -75,6 +75,26 @@
     </item>
     
     <item>
+      <title>DataScience for Business Pelatihan</title>
+      <link>/talk/example-copy/</link>
+      <pubDate>Wed, 29 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>/talk/example-copy/</guid>
+      <description>&lt;!-- raw HTML omitted --&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This training covers the following key topics:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Introduction to Data Science for Business&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Data Collection &amp;amp; Data Preparation&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Exploratory Data Analysis (EDA)&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Business Analytics &amp;amp; Predictive Modeling&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Data Visualization &amp;amp; Storytelling&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Implementation &amp;amp; Case Studies&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Image Batik Classification Based using Ensemble Learning</title>
       <link>/publication/2021-11-01-sdcs-cosrev-copy/</link>
       <pubDate>Fri, 20 Aug 2021 00:00:00 +0000</pubDate>
